@@ -56,25 +56,25 @@ def gradingStudents(grades):
     # Write your code here.
     #
     j=0
-    res = list()  # Empty list for assigning new grades
+    res = list()                          # Empty list for assigning new grades
     for i in grades:
-        if i>=38:  # Check if the grade is greater then 38
-            multiple_five = i+(5-(i%5))  # Find next multiple of 5 for current grade
-            a = multiple_five - i  # Defference between next mult of 5 and the current grade
-            if a < 3:  #  if the difference is greater than 3 then update the grade with the mult of 5
+        if i>=38:                         # Check if the grade is greater then 38
+            multiple_five = i+(5-(i%5))   # Find next multiple of 5 for current grade
+            a = multiple_five - i         # Defference between next mult of 5 and the current grade
+            if a < 3:                     # if the difference is greater than 3 then update the grade with the mult of 5
                 res.insert(j,multiple_five)
                 j+=1
                 a=0
             else:
-                res.insert(j,i)  # Otherwise no change in grade
+                res.insert(j,i)           # Otherwise no change in grade
                 j+=1
                 a=0
         else:
-            res.insert(j,i) # Otherwise no change in grade
+            res.insert(j,i)               # Otherwise no change in grade
             j+=1
             a=0
 
-    return res  # Return the new grades
+    return res                            # Return the new grades
 
 
 if __name__ == '__main__':
